@@ -1,9 +1,16 @@
 @keyframes move-to-right {
-  from {transform: translate(0, -50%)}
-  to {transform: translate(calc(100vw - 600px), -50%)}
+  from {left: 0}
+  to {left: calc(100% - 100px)}
 }
 
-.animated-yellow-box:hover {
+.animated-yellow-box {
   animation-name: move-to-right;
-  animation-duration: 60s;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
+.table {
+  display: grid;
+  grid-template-rows: repeat(6, minmax(0, 30px));
+  grid-template-columns: repeat(2, minmax(0, 100px));
 }
